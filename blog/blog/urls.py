@@ -35,5 +35,5 @@ urlpatterns = [
     # path('',log),
 
 
-
+     path('',include(('home.urls','home'),namespace='home')),
 ]

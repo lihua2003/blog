@@ -12,10 +12,10 @@ class User(AbstractUser):
     user_desc = models.CharField(max_length=500,blank=True)
 
     # 修改认证的字段为 手机号
-    # USERNAME_FIELD = 'mobile'
+    USERNAME_FIELD = 'mobile'
 
     #创建超级管理员必须输入的字段（不包括 手机号和密码）
-    # REQUIRED_FIELDS = ['username','email']
+    #REQUIRED_FIELDS = ['username','email']
 
     class Meta:
         db_table='tb_users'  #修改表名

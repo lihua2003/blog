@@ -1,8 +1,9 @@
 # 进行users 子应用的视图路由
 from django.urls import path
 from users.views import RegisterView,ImageCodeView
-from users.views import SmsCodeView
-# from users.views import LogoutView,ForgetPasswordView
+from users.views import SmsCodeView,LoginView
+from users.views import LogoutView
+#ForgetPasswordView
 # from users.views import UserCenterView,WriteBlogView
 
 urlpatterns = [
@@ -17,10 +18,10 @@ urlpatterns = [
      path('smscode/',SmsCodeView.as_view(),name='smscode'),
     #
     # #登录路由
-    # path('login/',LoginView.as_view(),name='login'),
+     path('login/',LoginView.as_view(),name='login'),
     #
     # #退出登录
-    # path('logout/',LogoutView.as_view(),name='logout'),
+    path('logout/',LogoutView.as_view(),name='logout'),
     #
     # #忘记密码
     # path('forgetpassword/',ForgetPasswordView.as_view(),name='forgetpassword'),
